@@ -1,9 +1,6 @@
 .header {
   &.open {
-    .overlay {
-      display: block;
-    }
-    .header__menu {
+    .header__toggle {
       > span:first-child {
         transform: rotate(45deg);
       }
@@ -19,26 +16,35 @@
   .overlay {
     display: none;
     position: fixed;
-    top: 3.75rem;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $darkBlue;
     background-image: linear-gradient($medBlue, transparent);
-    animation: fade-in 300ms ease-in-out forwards;
+    &.fade-in {
+      display: block;
+    }
+    &.fade-out {
+      display: block;
+    }
   }
 
   nav {
-    padding: 1.0625rem 1.5rem;
-    // border: 1px solid red;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    position: relative;
+    background-color: $white;
   }
   &__logo {
     img {
-      width: 15rem;
+      width: 13rem;
+      @include breakpoint-up(large) {
+        width: 15rem;
+      }
     }
   }
-  &__menu {
-    //mobile menu
+  &__toggle {
+    //mobile toggle
     > span {
       display: block;
       width: 26px;
@@ -83,13 +89,23 @@
       }
     }
   }
+  &__menu {
+    position: absolute;
+    background: $white;
+    padding: 1.625rem;
+    border-radius: 5px;
+    width: calc(100% - 3rem);
+    margin-top: 1.5rem;
+    left: 50%;
+    transform: translate(-50%);
 
-  &__cta {
-    font-size: $font-sm;
-    color: $white;
-    transition: opacity 300ms ease-in-out;
-    &:hover {
-      opacity: 0.75;
+    a {
+      color: $darkBlue;
+      text-transform: uppercase;
+      padding: 0.624rem;
+      display: block;
+      color: $darkBlue;
+      text-align: center;
     }
   }
 }
