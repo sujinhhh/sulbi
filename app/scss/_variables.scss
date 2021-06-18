@@ -1,0 +1,26 @@
+// Colors
+$medBlue: #0081cb;
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Font Size
+$font-sm: 0.875; // 14px
+$font-med: 1.125; // 18px
+
+$colors: (
+  home: #d16e8d,
+  about: #ffac83,
+  contact: #3f78c9,
+  courses: #49c4a3,
+);
+
+$greenGradient: linear-gradient(to right, $limeGreen, $brightCyan);
+
+// transition
+$opacityTransition: all 300ms ease-in-out;
