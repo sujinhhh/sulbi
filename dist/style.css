@@ -315,6 +315,13 @@ button:hover,
   background-color: white;
 }
 
+@media (min-width: 64em) {
+  .header nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .header__logo img {
   width: 13rem;
 }
@@ -657,21 +664,24 @@ button:hover,
 }
 
 .footer {
-  background-color: #2d314d;
   color: white;
   padding: 2.5rem;
   text-align: center;
+}
+
+.footer__container {
+  background-color: #2d314d;
 }
 
 @media (min-width: 64em) {
   .footer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3] 2fr;
-        grid-template-columns: repeat(3, 1fr) 2fr;
+    -ms-grid-columns: 2fr 0.8fr 0.8fr 2fr;
+        grid-template-columns: 2fr 0.8fr 0.8fr 2fr;
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "logo links1 links2 cta" "social links1 links2 cta";
+        grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
     justify-items: start;
   }
 }
@@ -681,7 +691,6 @@ button:hover,
 }
 
 .footer__logo {
-  margin-bottom: 1.875rem;
   display: inline-block;
 }
 
@@ -692,19 +701,30 @@ button:hover,
   padding: 0.5rem;
 }
 
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
+}
+
 @media (min-width: 64em) {
   .footer__logo {
     grid-area: logo;
   }
 }
 
-.footer__social {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
   .footer__social {
     grid-area: social;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
 }
 
@@ -712,8 +732,17 @@ button:hover,
   display: inline-block;
 }
 
+.footer__social a img {
+  width: 30px;
+  opacity: 0.6;
+}
+
+.footer__social a img:hover {
+  opacity: 1;
+}
+
 .footer__social a:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 1.2rem;
 }
 
 .footer__links {
@@ -728,6 +757,7 @@ button:hover,
       -ms-flex-align: center;
           align-items: center;
   line-height: 2.25;
+  font-size: 1rem;
 }
 
 @media (min-width: 64em) {
@@ -744,8 +774,10 @@ button:hover,
   }
 }
 
-.footer__links.col2 {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -760,10 +792,98 @@ button:hover,
     text-align: right;
     -ms-grid-column-align: end;
         justify-self: end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.footer__cta a.button {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__cta a.button {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.footer__copyright {
+  grid-area: copyright;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 0.875rem;
+}
+
+.company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #f3f4f6;
+  height: 1500px;
+}
+
+.company__welcome {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  width: 700px;
+  background-color: aquamarine;
+}
+
+.company__welcome::before {
+  content: "Wecome to";
+  background-color: #619b1e;
+  padding: 0 10px;
+  display: block;
+  height: 30px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+
+.company__welcome img {
+  width: 100%;
+}
+
+.company__work {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 700px;
+  height: 400px;
+  border: 1px solid red;
+  background-color: white;
+}
+
+.company__work img {
+  width: 200px;
+}
+
+.company__contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: bisque;
+  width: 600px;
+}
+
+.company__contact .map {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #06bd0f;
+  background-image: url("https://maps.googleapis.com/maps/api/staticmap?scale=1&size=1600x900&style=feature:poi.business|visibility:off&style=feature:water|visibility:simplified&style=feature:road|element:labels.icon|visibility:off&style=feature:road.highway|element:labels|saturation:-90|lightness:25&format=jpg&language=ko&region=KR&markers=color:0xd07ea7|35.1832714,129.0655797&zoom=16&client=google-presto&signature=Dp6rNMSXQcSMvCAecMiX-MQurSo");
 }
 /*# sourceMappingURL=style.css.map */

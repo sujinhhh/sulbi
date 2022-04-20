@@ -3,10 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Company</title>
+    <link rel="stylesheet" href="/dist/style.css" />
+
   </head>
   <body>
-    <header></header>
-    <section></section>
+    <header class="header container">
+      <nav class="container--pall flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src="images/logo.svg" alt="gukto">
+        </a>
+        <a href="#" id="hamberger" class="header__toggle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </nav>
+
+    </header>
+    <section class="company">
+      <div class="company__welcome">
+        <p class="com"> 부산 국토종합설비</p>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+      </div>
+      <div class="company__work">
+        <img src="https://cdn.pixabay.com/photo/2018/03/01/05/46/business-3189797_1280.png" alt="">
+        <p>화장실 누수방수</p>
+        <p>옥상 누수방수</p>
+      </div>
+      <div class="company__contact">
+        <div class="map"></div>
+        <p>Email : gukto@gukto.com</p>
+      </div>
+      
+    </section>
   </body>
 </html>
