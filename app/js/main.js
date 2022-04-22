@@ -10,4 +10,4 @@ increment()
 increment()
 
 let i = "sujin"
-console.log(typeof i);
+console.log(typeof i   );
