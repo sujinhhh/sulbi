@@ -1,3 +1,5 @@
+.visitor {
+}
 .company {
   display: flex;
   flex-direction: column;
@@ -47,6 +49,45 @@
       height: 300px;
       border: 1px solid rgb(6, 189, 15);
       background-image: url("https://maps.googleapis.com/maps/api/staticmap?scale=1&size=1600x900&style=feature:poi.business|visibility:off&style=feature:water|visibility:simplified&style=feature:road|element:labels.icon|visibility:off&style=feature:road.highway|element:labels|saturation:-90|lightness:25&format=jpg&language=ko&region=KR&markers=color:0xd07ea7|35.1832714,129.0655797&zoom=16&client=google-presto&signature=Dp6rNMSXQcSMvCAecMiX-MQurSo");
+    }
+  }
+}
+
+.about-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+  grid-auto-rows: minmax(5em, auto);
+  // justify-items: center;
+  // align-items: center;
+
+  .item {
+    box-shadow: inset 4px 4px 10px rgba(51, 153, 134, 0.3);
+  }
+  .item:nth-child(odd) {
+    box-shadow: inset 2px 2px 13px rgba(153, 51, 153, 0.3);
+  }
+  .item:nth-child(1) {
+    grid-column: 1/4;
+  }
+
+  .item:nth-child(4) {
+    grid-column: 3/4;
+    grid-row: 2/4;
+  }
+
+  .item:nth-child(7) {
+    grid-column: 1/4;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 80px;
+      justify-self: center;
     }
   }
 }

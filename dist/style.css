@@ -886,4 +886,62 @@ button:hover,
   border: 1px solid #06bd0f;
   background-image: url("https://maps.googleapis.com/maps/api/staticmap?scale=1&size=1600x900&style=feature:poi.business|visibility:off&style=feature:water|visibility:simplified&style=feature:road|element:labels.icon|visibility:off&style=feature:road.highway|element:labels|saturation:-90|lightness:25&format=jpg&language=ko&region=KR&markers=color:0xd07ea7|35.1832714,129.0655797&zoom=16&client=google-presto&signature=Dp6rNMSXQcSMvCAecMiX-MQurSo");
 }
+
+.about-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+  grid-auto-rows: minmax(5em, auto);
+}
+
+.about-footer .item {
+  -webkit-box-shadow: inset 4px 4px 10px rgba(51, 153, 134, 0.3);
+          box-shadow: inset 4px 4px 10px rgba(51, 153, 134, 0.3);
+}
+
+.about-footer .item:nth-child(odd) {
+  -webkit-box-shadow: inset 2px 2px 13px rgba(153, 51, 153, 0.3);
+          box-shadow: inset 2px 2px 13px rgba(153, 51, 153, 0.3);
+}
+
+.about-footer .item:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.about-footer .item:nth-child(4) {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+}
+
+.about-footer .item:nth-child(7) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.about-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-footer__container img {
+  width: 80px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
 /*# sourceMappingURL=style.css.map */
