@@ -10,8 +10,8 @@ $veryLightGray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
 // Font Size
-$font-sm: 0.875; // 14px
-$font-med: 1.125; // 18px
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
 $font-lg: 1.25rem;
 $font-xlg: 3.25rem;
 
@@ -20,9 +20,36 @@ $colors: (
   about: #ffac83,
   contact: #3f78c9,
   courses: #49c4a3,
+  "white": #fff,
 );
+
+@debug map-get($colors, home);
+@debug map-has-key($colors, about);
+@debug map-remove($colors, about);
+@debug map-merge(
+  $colors,
+  (
+    job: "#000",
+  )
+);
+
+.test-btn {
+  background-color: map-get($colors, contact);
+  color: map-get($colors, about);
+}
 
 $greenGradient: linear-gradient(to right, $limeGreen, $brightCyan);
 
 // transition
 $opacityTransition: all 300ms ease-in-out;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thinkness: 1px;
+$base-border-radius: 100px;
+
+// Box-shadow
+$base-box-shodow: 1px 3px 5px rgba(0, 0, 0, 0.1);

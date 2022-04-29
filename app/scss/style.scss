@@ -2,6 +2,9 @@
 @import "mixins";
 @import "animations";
 
+// colors
+@import "colors";
+
 @import "globals";
 @import "header";
 @import "hero";
@@ -9,3 +12,4 @@
 @import "article";
 @import "footer";
 @import "about";
+@import "components/card";
