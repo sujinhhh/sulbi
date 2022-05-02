@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Company</title>
-    <link rel="stylesheet" href="dist/scss/style.css" />
+    <link rel="stylesheet" href="css/scss/style.css" />
 
   </head>
   <body>
@@ -13,7 +13,7 @@
         <a href="/" class="header__logo">
           <img src="images/logo.svg" alt="gukto">
         </a>
-        <div class="flex visitor ">
+        <div class="flex visitor ml-5 font-md">
           <span class="container--pr" >Visitors Today </span>
           <span class="container--pr"  id="count-el"> 3</span>
           <button  id="increment-btn" style="display: inline; padding: 1px 4px ; background: black; border-radius: 30px;" onclick="increment()"> ❤️ </button>
@@ -26,7 +26,7 @@
       </nav>
 
     </header>
-    <section class="company " >
+    <section class="company" >
       <div class="company__welcome bg-contact-light-7">
         <div class="card test-btn">
 
@@ -40,12 +40,13 @@
       </div>
       <div class="company__work">
         <img src="https://cdn.pixabay.com/photo/2018/03/01/05/46/business-3189797_1280.png" alt="">
-        <p>화장실 누수방수</p>
-        <p>옥상 누수방수</p>
+        <p class="ml-5 font-lg">화장실 누수방수</p>
+        <p class="ml-5 font-lg">옥상 누수방수</p>
       </div>
-      <div class="company__contact">
+      <div class="company__contact mt-3 mb-3">
         <div class="map"></div>
-        <p>Email : gukto@gukto.com</p>
+        <div class="btn-outlined-courses">Email : gukto@gukto.com</div>
+        <div class="btn-complement-courses">Phone : 051-847-8888</div>
       </div>
       
     </section>

@@ -1,4 +1,5 @@
 @import "variables";
+@import "functions";
 @import "mixins";
 @import "animations";
 
@@ -12,4 +13,9 @@
 @import "article";
 @import "footer";
 @import "about";
+
+// components
 @import "components/card";
+@import "components/button";
+@import "utilities";
+@import "breakpoint";
