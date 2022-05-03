@@ -9,7 +9,6 @@
   //   flex-basis: 0;
   align-content: center;
   background-color: $lightGrayishBlue;
-  height: 1500px;
   &__welcome {
     flex: 2;
     width: 700px;
@@ -70,6 +69,7 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
